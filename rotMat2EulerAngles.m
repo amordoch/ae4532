@@ -41,13 +41,13 @@ end
 end
 
 function [th1, th2, th3] = xyz(R)
-th2 = asin(R(3,1)); % no ambiguity
+th2 = asin(R(3,1)); 
 if cos(th2) == 0
     % Singularity
     th1 = NaN;
     th3 = NaN;
 else
-    th1 = asin(R(3,2)/-cos(th2));
-    th3 = asin(R(2,1)/-cos(th2));
+    th1 = atan2(-R(3,2)/cos(th2), R(3,3)/cos(th2));
+    th3 = atan2(-R(2,1)/cos(th2), R(1,1)/cos(th2));
 end
 end
