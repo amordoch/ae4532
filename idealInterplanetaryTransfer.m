@@ -40,7 +40,7 @@ xfer.dV_2 = sqrt(Vinf_2^2 + 2*mu_2/rp2) - sqrt(mu_2/rp2);
 xfer.dV = xfer.dV_1 + xfer.dV_2;
 % Ejection angle (to prograde for outer bodies, retrograde for inner)
 e_1 = 1 + rp1*Vinf_1^2/mu_1;
-xfer.f_inf = acosd(-1/e_1);
+xfer.finf_out = acosd(-1/e_1);
 % Phase angle: use xfer true anomaly change - mean motion * transfer time
 n1 = sqrt(mu_sun/a_1^3);
 n2 = sqrt(mu_sun/a_2^3);
