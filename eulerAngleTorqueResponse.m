@@ -1,6 +1,13 @@
 function [t, w, th] = eulerAngleTorqueResponse(seq, J, tau, w0, th0, tspan)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%eulerAngleTorqueResponse Calculates the response of angular velocity and euler
+%angles to a given external torque.
+%   INPUTS:
+%       seq (char): euler angle sequence (xyz, zxz)
+%       J (3x3): MOI matrix
+%       tau (3x1): external torque
+%       w0 (3x1): initial angular velocity
+%       th (3x1): initial euler angles
+%       tspan: time interval
 try
     % Get the function which gives us thdot = f(w, th)
     thdot = feval(seq);
