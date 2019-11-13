@@ -38,7 +38,7 @@ end
 
 function thdot = xyz()
 % Derived in HW5 problem 1
-thdot = @(w, th) [cos(th(2))*sec(th(1)) sec(th(1))*sin(th(2)) 0;
-                  -sin(th(2)) cos(th(2)) 0;
-                  cos(th(2))*tan(th(1)) sin(th(2))*tan(th(1)) 1]*w;
+thdot = @(w, th) [cos(th(3))*sec(th(2)) -sec(th(2))*sin(th(3)) 0;
+                  sin(th(3)) cos(th(3)) 0;
+                  -cos(th(3))*tan(th(2)) sin(th(3))*tan(th(2)) 1]*w;
 end
